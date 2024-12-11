@@ -22,7 +22,7 @@ jobs:
           npm run build --if-present
           npm run test --if-present
       - name: Zip artifact for deployment
-        working-directory: ./back # Додано робочу директорію
+        working-directory: back # Додано робочу директорію
         run: zip -r ../release.zip ./* # Оновлено шлях та команда
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
